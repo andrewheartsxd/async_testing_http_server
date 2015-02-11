@@ -6,11 +6,14 @@ function start(route, handle) {
     var pathname = url.parse(request.url).pathname;
     console.log(pathname);
 
+    var nameStart;
+    var greetName;
+
     if(pathname.lastIndexOf('/') > 0) {
-      var nameStart = pathname.lastIndexOf('/') + 1;
-      var greetName = pathname.substring(nameStart, pathname.length);
+      nameStart = pathname.lastIndexOf('/') + 1;
+      greetName = pathname.substring(nameStart, pathname.length);
       pathname = pathname.substring(0, pathname.lastIndexOf('/'));
-      console.log(greetName); 
+      //console.log(greetName); 
     }
     
     console.log('Request for ' + pathname + ' received.');

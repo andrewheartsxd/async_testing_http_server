@@ -9,8 +9,8 @@ function base(response) {
 function time(response) {
   console.log('Request handler "time" was called.');
   
-  var date = new Date;
-  date = date.toTimeString();
+  var date = new Date();
+  date = date.toString();
 
   response.writeHead(200, {"Content-Type": "text/plain"});
   response.write(date);
